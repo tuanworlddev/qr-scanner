@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tuandev.qrscanner.MainController">
+   <center>
+      <TableView fx:id="qrCodeDataTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+        <columns>
+          <TableColumn fx:id="qrCodeDataCol1" prefWidth="52.79998779296875" text="#" />
+          <TableColumn fx:id="qrCodeDataTable2" prefWidth="746.4000244140625" text="QR Code Data" />
+        </columns>
+      </TableView>
+   </center>
+   <top>
+      <BorderPane prefHeight="47.0" prefWidth="821.0" BorderPane.alignment="CENTER">
+         <left>
+            <HBox alignment="CENTER_LEFT" prefHeight="47.0" prefWidth="371.0" spacing="5.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#openFilePDF" prefHeight="26.0" prefWidth="86.0" style="-fx-background-color: #226ce3; -fx-text-fill: #ffffff;" text="Browser">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+                  <TextField fx:id="filePDFField" editable="false" prefHeight="26.0" prefWidth="265.0" promptText="Select a PDF file" />
+               </children>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </HBox>
+         </left>
+         <right>
+            <HBox alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="379.0" spacing="5.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#onExport" prefHeight="26.0" prefWidth="86.0" style="-fx-background-color: #00b303; -fx-text-fill: #ffffff;" text="Export">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor></Button>
+               </children>
+               <padding>
+                  <Insets left="5.0" right="5.0" />
+               </padding>
+            </HBox>
+         </right>
+      </BorderPane>
+   </top>
+</BorderPane>
