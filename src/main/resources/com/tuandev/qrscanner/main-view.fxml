@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.HBox?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tuandev.qrscanner.MainController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tuandev.qrscanner.MainController">
    <center>
       <TableView fx:id="qrCodeDataTable" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
         <columns>
@@ -37,6 +37,7 @@
          <right>
             <HBox alignment="CENTER_RIGHT" prefHeight="47.0" prefWidth="379.0" spacing="5.0" BorderPane.alignment="CENTER">
                <children>
+                  <Button fx:id="removeAuthBtn" mnemonicParsing="false" onAction="#onLogout" style="-fx-background-color: #e60b0b;" text="Remove Auth" textFill="WHITE" visible="false" />
                   <Button mnemonicParsing="false" onAction="#onExport" prefHeight="26.0" prefWidth="86.0" style="-fx-background-color: #00b303; -fx-text-fill: #ffffff;" text="Export">
                      <cursor>
                         <Cursor fx:constant="HAND" />
